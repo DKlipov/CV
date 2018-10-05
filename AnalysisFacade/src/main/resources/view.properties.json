@@ -1,0 +1,56 @@
+{
+  "tables": [
+    {
+      "name": "contingent",
+      "printName": "Количество вакантных мест для приема (перевода)",
+      "source": "vpo2_view",
+      "description": "table desc",
+      "rows": [
+
+        {
+          "name": "Наименование специальности",
+          "source": "SUBJECTTITLE"
+        },
+        {
+          "name": "Уровень образования",
+          "source": "QUALIFICATIONSTITLE"
+        },
+        {
+          "source": "COURSE"
+        }
+
+      ],
+      "columns": [
+[
+          {
+            "name": "Форма обучения",
+            "source": "DEVELOPFORMTITLE"
+          },
+          {
+            "source": "COMPENSATIONTITLE"
+          },
+          {
+            "source": "COURSE"
+          },
+  {
+    "name": "Наименование специальности",
+    "source": "SUBJECTTITLE"
+  }
+]
+      ],
+      "identity": "STUDENT_ID"
+    }
+  ],
+  "views": [
+    {
+      "name": "contingent",
+      "printName": "Количество вакантных мест для приема (перевода)",
+      "description": "table desc",
+      "printHeader": "Данные на %1$s",
+      "printFooter": "ПРИЛОЖЕНИЕ 1\nОбщее количество вакантных мест для приема (перевода) на %1$s %2$s\nОбщее количество студентов на %1$s  %3$s",
+      "tables": [
+        "contingent"
+      ]
+    }
+  ]
+}

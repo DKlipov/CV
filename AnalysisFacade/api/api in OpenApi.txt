@@ -1,0 +1,227 @@
+swagger: "2.0"
+info:
+  description: "This is a sample schema."
+  version: "1.0.0"
+  title: "Title"
+  termsOfService: "http://swagger.io/terms/"
+  license:
+    name: "Apache 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0.html"
+host: "nsuem.ru"
+basePath: "/api"
+schemes:
+- "http"
+paths:
+  /tables:
+    get:
+      parameters:
+      - name: "data"
+        in: "query"
+        description: "The answer is whether to contain the body, header=no, full =yes"
+        required: false
+        type: "string"
+        enum:
+          - "header"
+          - "full"
+        default: "full"
+      - name: "table"
+        in: "query"
+        description: "Name of requested table, if null returns list with all tables"
+        required: false
+        type: "string"
+      tags:
+      - "table"
+      summary: "Get list tables or table"
+      description: ""
+      operationId: "getTable"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/Table"
+  /views:
+    get:
+      tags:
+      - "view"
+      parameters:
+      - name: "data"
+        in: "query"
+        description: "The answer is whether to contain the body, header=no, full =yes"
+        required: false
+        type: "string"
+        enum:
+          - "header"
+          - "full"
+        default: "full"
+      - name: "view"
+        in: "query"
+        description: "Name of requested view, if null returns list with all views"
+        required: false
+        type: "string"
+      summary: "Get list views or view"
+      description: ""
+      operationId: "getView"
+      produces:
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/View"
+definitions:
+
+  Table:
+    type: "object"
+    properties:
+      table:
+        type: "string"
+        description: "Name of table"
+      header:
+        $ref: "#/definitions/TableHeader"
+      body:
+        $ref: "#/definitions/TableBody"
+        
+  TableHeader:
+    type: "object"
+    properties:
+      update:
+        type: "string"
+        description: "Date and time last update of table"
+      height:
+        type: "integer"
+        description: "count of rows with data"
+        format: "int64"
+      width:
+        type: "integer"
+        description: "count of columns with data"
+        format: "int64"
+      headerLevels:
+        type: "integer"
+        format: "int64"
+      groupLevels:
+        type: "integer"
+        format: "int64"
+      description:
+        type: "string"
+      printTitle:
+        type: "string"
+        
+  TableBody:
+    type: "object"
+    properties:
+      styles:
+        type: "array"
+        items:
+          $ref: "#/definitions/CellStyle"
+      header:
+        $ref: "#/definitions/TableBodyHeader"
+      rows:
+        type: "array"
+        items:
+          $ref: "#/definitions/TableRow"
+  CellStyle:
+    type: "object"
+    properties:
+      style:
+        type: "integer"
+      align:
+        type: "string"
+      color:
+        type: "string"
+      background-color:
+        type: "string"
+  TableBodyHeader:
+    type: "object"
+    properties:
+      columnTitles:
+        type: "array" 
+        items:
+          $ref: "#/definitions/ColumnTitle"
+      groupTitles:
+        type: "array"
+        items:
+          $ref: "#/definitions/GroupTitle"
+  ColumnTitle:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+      columns:
+        type: "array"
+        items:
+          $ref: "#/definitions/ColumnTitle"
+          description: "the depth of recursion is given TableHeader/HeaderLevels"
+      columnNum:
+        type: "integer"
+        description: "can be null"
+      style:
+        type: "integer"
+  GroupTitle:
+    type: "object"
+    properties:
+      title:
+        type: "string"
+      groups:
+        type: "array"
+        items:
+          $ref: "#/definitions/GroupTitle"
+          description: "the depth of recursion is given TableHeader/GroupLevels"
+      rowNum:
+        type: "integer"
+        description: "can be null"
+      style:
+        type: "integer"
+  TableRow:
+    type: "object"
+    properties:
+      rowNum: 
+        type: "integer"
+      cells:
+        type: "array"
+        items:
+          $ref: "#/definitions/TableCell"
+  TableCell:
+    type: "object"
+    properties:
+      columnNum:
+        type: "integer"
+        description: "equals with GroupTitle/ColumnNum"
+      value:
+        type: "string"
+      style:
+        type: "integer"
+  View:
+    type: "object"
+    properties:
+      view:
+        type: "string"
+        description: "name of view"
+      header:
+        $ref: "#/definitions/ViewHeader"
+      body:
+        $ref: "#/definitions/ViewBody"
+  ViewHeader:
+    type: "object"
+    description: "equals table header"
+    properties:
+      update:
+        type: "string"
+      printTitle:
+        type: "string"
+      description:
+        type: "string"
+      numTables:
+        type: "integer"
+  ViewBody:
+    type: "object"
+    properties:
+      printHeader:
+        type: "string"
+      printFooter:
+        type: "string"
+      tables:
+        type: "array"
+        items:
+          $ref: "#/definitions/Table"

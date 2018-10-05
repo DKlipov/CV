@@ -1,0 +1,134 @@
+http://nsuem.ru/app/tables&data=header
+[{"table":"contingentTable","header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица контингента студентов","printTitle":"Контингент студентов"},"body":""},
+"table":"studentMoveTable","header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица движение студентов","printTitle":"Движение студентов"},"body":""]
+
+http://nsuem.ru/api/tables?table=contingentTable&data=header
+{"table":"contingentTable","header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица контингента студентов","printTitle":"Контингент студентов"},"body":""}
+
+http://nsuem.ru/api/tables?table=contingentTable&data=header
+{"table":"contingentTable","header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица контингента студентов","printTitle":"Контингент студентов"},"body":""}
+
+http://nsuem.ru/api/tables?table=contingentTable&data=full
+http://nsuem.ru/api/tables?table=contingentTable
+{
+	"table":"contingentTable",
+	"header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupLevels":2,"description":"Сводная таблица контингента студентов","printTitle":"Контингент студентов"},
+	"body":{
+		"styles":[
+			{"style":1,"align":"left","color":"#000000","background-color":"#FFFFFF"},
+			{"style":2,"align":"right","color":"#000000","background-color":"#B8CCE4"},
+			{"style":3,"align":"center","color":"#000000","background-color":"#366092"},
+			{"style":4,"align":"right","color":"#000000","background-color":"#95B3D7"},
+			{"style":5,"align":"right","color":"#000000","background-color":"#DCE6F1"},
+			{"style":6,"align":"right","color":"#000000","background-color":"#FFFFFF"},
+			{"style":7,"align":"left","color":"#000000","background-color":"#B8CCE4"},
+			{"style":8,"align":"left","color":"#000000","background-color":"#95B3D7"}
+		],
+		"header":{
+			"columnTitles":[{"columnNum":1,"title":"Уровень образования","style":3},{"columnNum":2,"title":"Специальность","style":3},{"title":"Вид возмещения затрат","columns":[{"columnNum":3,"columns":"","title":"Бюджет","style":3},{"columnNum":4,"columns":"","title":"Контракт","style":3}]},{"title":"Общий итог","style":3","columnNum":5,columns":""}]
+			"groupTitles":[
+				{"title":"аспирантура",groups:[{"rowNum":1,"title":"Информатика и вычислительная техника",groups:"","style":1},{"rowNum":2,"title":"Исторические науки и археология",groups:"","style":1},{"rowNum":3,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+				{"rowNum":4,"title":"аспирантура Итог",groups:"","style":7},
+				{"title":"специалитет",groups:[{"rowNum":6,"title":"Менеджмент организации",groups:"","style":1},{"rowNum":5,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+				{"rowNum":7,"title":"специалитет Итог",groups:"","style":7},
+				{"rowNum":8,"title":"Общий итог",groups:"","style":8}
+				]
+		},
+		rows:[
+			{"rowNum":1,"cells":[{"columnNum":3,"value":3,"style":6},{"columnNum":4,"value":17,"style":6},{"columnNum":5,"value":20,"style":5}]}
+			{"rowNum":2,"cells":[{"columnNum":1,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":10,"style":5}]}
+			{"rowNum":3,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":9,"style":5}]}
+			{"rowNum":4,"cells":[{"columnNum":15,"value":3,"style":2},{"columnNum":4,"value":151,"style":2},{"columnNum":5,"value":166,"style":2}]}
+			{"rowNum":5,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+			{"rowNum":6,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+			{"rowNum":7,"cells":[{"columnNum":20,"value":3,"style":2},{"columnNum":4,"value":758,"style":2},{"columnNum":5,"value":778,"style":2}]}
+			{"rowNum":8,"cells":[{"columnNum":35,"value":3,"style":4},{"columnNum":4,"value":909,"style":4},{"columnNum":5,"value":944,"style":4}]}
+		]
+	}
+}
+
+http://nsuem.ru/api/views&data=header
+[{"view":"commonView","update":"00:23 18.02.2018","header":{"numTables":2,"printTitle":"Количество вакантных мест для приема","description":"Несколько таблиц, представляющих схожие данные"},"body":""}]
+
+http://nsuem.ru/api/views?view=commonView&data=full
+http://nsuem.ru/api/views?view=commonView
+{"view":"commonView","header":{"update":"00:23 18.02.2018","numTables":2,"printTitle":"Количество вакантных мест для приема (перевода)","description":"Несколько таблиц, представляющих схожие данные"},
+	"body":{"printHeader":"Данные на 01.02.2018 \nОбщее количество мест приема:15000 \nОбщее количество мест перевода: 5000","printFooter":"Текст в конце",
+		"tables":[
+			{
+				"table":"contingentTable",
+				"header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица контингента студентов","printTitle":"Контингент студентов"},
+				"body":{
+					"styles":[
+						{"style":1,"align":"left","color":"#000000","background-color":"#FFFFFF"},
+						{"style":2,"align":"right","color":"#000000","background-color":"#B8CCE4"},
+						{"style":3,"align":"center","color":"#000000","background-color":"#366092"},
+						{"style":4,"align":"right","color":"#000000","background-color":"#95B3D7"},
+						{"style":5,"align":"right","color":"#000000","background-color":"#DCE6F1"},
+						{"style":6,"align":"right","color":"#000000","background-color":"#FFFFFF"},
+						{"style":7,"align":"left","color":"#000000","background-color":"#B8CCE4"},
+						{"style":8,"align":"left","color":"#000000","background-color":"#95B3D7"}
+					],
+					"header":{
+						"columnTitles":[{"columnNum":1,"title":"Уровень образования","style":3},{"columnNum":2,"title":"Специальность","style":3},{"title":"Вид возмещения затрат","columns":[{"columnNum":3,"columns":"","title":"Бюджет","style":3},{"columnNum":4,"columns":"","title":"Контракт","style":3}]},{"title":"Общий итог","style":3","columnNum":5,columns":""}]
+						"columnGroupTitles":[
+							{"title":"аспирантура",groups:[{"rowNum":1,"title":"Информатика и вычислительная техника",groups:"","style":1},{"rowNum":2,"title":"Исторические науки и археология",groups:"","style":1},{"rowNum":3,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+							{"rowNum":4,"title":"аспирантура Итог",groups:"","style":7},
+							{"title":"специалитет",groups:[{"rowNum":6,"title":"Менеджмент организации",groups:"","style":1},{"rowNum":5,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+							{"rowNum":7,"title":"специалитет Итог",groups:"","style":7},
+							{"rowNum":8,"title":"Общий итог",groups:"","style":8}
+							]
+					},
+					rows:[
+						{"rowNum":1,"cells":[{"columnNum":3,"value":3,"style":6},{"columnNum":4,"value":17,"style":6},{"columnNum":5,"value":20,"style":5}]}
+						{"rowNum":2,"cells":[{"columnNum":1,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":10,"style":5}]}
+						{"rowNum":3,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":9,"style":5}]}
+						{"rowNum":4,"cells":[{"columnNum":15,"value":3,"style":2},{"columnNum":4,"value":151,"style":2},{"columnNum":5,"value":166,"style":2}]}
+						{"rowNum":5,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+						{"rowNum":6,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+						{"rowNum":7,"cells":[{"columnNum":20,"value":3,"style":2},{"columnNum":4,"value":758,"style":2},{"columnNum":5,"value":778,"style":2}]}
+						{"rowNum":8,"cells":[{"columnNum":35,"value":3,"style":4},{"columnNum":4,"value":909,"style":4},{"columnNum":5,"value":944,"style":4}]}
+					]
+				}
+			},
+			{
+				"table":"contingentTable1",
+				"header":{"update":"00:23 18.02.2018","width":3,"height":8,"headerLevels":2,"groupsLevels":2,"desription":"Сводная таблица контингента студентов1","printTitle":"Контингент студентов"},
+				"body":{
+					"styles":[
+						{"style":1,"align":"left","color":"#000000","background-color":"#FFFFFF"},
+						{"style":2,"align":"right","color":"#000000","background-color":"#B8CCE4"},
+						{"style":3,"align":"center","color":"#000000","background-color":"#366092"},
+						{"style":4,"align":"right","color":"#000000","background-color":"#95B3D7"},
+						{"style":5,"align":"right","color":"#000000","background-color":"#DCE6F1"},
+						{"style":6,"align":"right","color":"#000000","background-color":"#FFFFFF"},
+						{"style":7,"align":"left","color":"#000000","background-color":"#B8CCE4"},
+						{"style":8,"align":"left","color":"#000000","background-color":"#95B3D7"}
+					],
+					"header":{
+						"columnTitles":[{"columnNum":1,"title":"Уровень образования","style":3},{"columnNum":2,"title":"Специальность","style":3},{"title":"Вид возмещения затрат","columns":[{"columnNum":3,"columns":"","title":"Бюджет","style":3},{"columnNum":4,"columns":"","title":"Контракт","style":3}]},{"title":"Общий итог","style":3","columnNum":5,columns":""}]
+						"columnGroupTitles":[
+							{"title":"аспирантура",groups:[{"rowNum":1,"title":"Информатика и вычислительная техника",groups:"","style":1},{"rowNum":2,"title":"Исторические науки и археология",groups:"","style":1},{"rowNum":3,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+							{"rowNum":4,"title":"аспирантура Итог",groups:"","style":7},
+							{"title":"специалитет",groups:[{"rowNum":6,"title":"Менеджмент организации",groups:"","style":1},{"rowNum":5,"title":"Бухгалтерский учет, анализ, аудит",groups:"","style":1}]},
+							{"rowNum":7,"title":"специалитет Итог",groups:"","style":7},
+							{"rowNum":8,"title":"Общий итог",groups:"","style":8}
+							]
+					},
+					rows:[
+						{"rowNum":1,"cells":[{"columnNum":3,"value":3,"style":6},{"columnNum":4,"value":17,"style":6},{"columnNum":5,"value":20,"style":5}]}
+						{"rowNum":2,"cells":[{"columnNum":1,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":10,"style":5}]}
+						{"rowNum":3,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":9,"style":6},{"columnNum":5,"value":9,"style":5}]}
+						{"rowNum":4,"cells":[{"columnNum":15,"value":3,"style":2},{"columnNum":4,"value":151,"style":2},{"columnNum":5,"value":166,"style":2}]}
+						{"rowNum":5,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+						{"rowNum":6,"cells":[{"columnNum":0,"value":3,"style":6},{"columnNum":4,"value":1,"style":6},{"columnNum":5,"value":1,"style":5}]}
+						{"rowNum":7,"cells":[{"columnNum":20,"value":3,"style":2},{"columnNum":4,"value":758,"style":2},{"columnNum":5,"value":778,"style":2}]}
+						{"rowNum":8,"cells":[{"columnNum":35,"value":3,"style":4},{"columnNum":4,"value":909,"style":4},{"columnNum":5,"value":944,"style":4}]}
+					]
+				}
+			}
+		]
+	}
+}
+
+
